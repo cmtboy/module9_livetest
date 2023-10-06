@@ -39,18 +39,17 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.all(8.0), // Add padding around the GridView
+          padding: const EdgeInsets.all(8.0),
           child: Wrap(
-            spacing: 8.0, // Add space between buttons
+            spacing: 8.0,
             runSpacing: 8.0,
             children: buttonList.map((buttonName) {
               bool isSelected = buttonName == selectedButton;
 
               return ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.symmetric(
-                      vertical: 8, horizontal: 16), // Adjust button size
-                  primary: isSelected ? Colors.orange : Colors.grey,
+                  padding: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+                  backgroundColor: isSelected ? Colors.orange : Colors.grey,
                 ),
                 onPressed: () {
                   setState(() {
